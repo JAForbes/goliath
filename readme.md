@@ -58,8 +58,13 @@ So you might have a module that defines a "theme" which is just a hash of css cl
 keyed by category (behaviors,sizes,styles,resets,shape,etc) that many components share.
 And I'm thinking you could optionally do all this config manually in your given app, or have a build step that injects the theme, 
 the hyperscript library, and an aggregate of components you want to use so the setup doesn't need to happen 
-for every component, you'd just get a nice bundle preconfigured for say material design + mithril, 
-or bootstrap style + snabbdom, but the actual business logic and structure for the component would be framework portable.
+for every component, you'd just get a nice bundle preconfigured for say 
+
+- material design + mithril, 
+- bootstrap style + snabbdom,
+- theme + library
+
+... but the actual business logic and structure for the component would be framework portable.
 
 "Hyperscript" becomes the rosetta stone so to speak and we paper over inconsistencies.
 
