@@ -46,6 +46,8 @@ I want a way for us to write components that work in many frameworks, that have 
 I'm betting tachyons plugs a big part of the hole, small composable instructions that can either be extended, 
 augmented or replaced entirely.  I'm also assuming JS is in play.
 
+> Components that don't require JS are awesome though!
+
 So my idea is, divide styles into layers that make it convenient to replace say, hover behaviour without touching colour/font/shape/size.
 You can completely ignore that layer and you just get a nice component with a default theme, you can also side step tachyons all together 
 and just use your own classnames, even if they're in a oocss style.  
