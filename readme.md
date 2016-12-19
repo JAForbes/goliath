@@ -54,7 +54,7 @@ and just use your own classnames, even if they're in a oocss style.
 
 I think we can build theming layers on top of this system too!
 
-So you might have a module that defines a "theme" which is just a set of hash of css classes 
+So you might have a module that defines a "theme" which is just a hash of css classes 
 keyed by category (behaviors,sizes,styles,resets,shape,etc) that many components share.
 And I'm thinking you could optionally do all this config manually in your given app, or have a build step that injects the theme, 
 the hyperscript library, and an aggregate of components you want to use so the setup doesn't need to happen 
