@@ -20,6 +20,21 @@ Functions work everywhere, css classes work everywhere.
 And if we divide styles into separate categories (behaviour, size, shape, colour, etc), 
 it might make them easier to customize without overwriting styles we want to retain.
 
+```ls
+defaults =
+  button:
+    style: ".bg-blue.bw0.outline-0"
+    size: ".w3.h3.f1"
+    shape: ".br-100"
+    behaviour: ".grow"
+
+  content:
+    style: ".white"
+    size: ""
+    shape: ""
+    behaviour: ""
+```
+
 Using livescript for no particular reason:
 https://github.com/JAForbes/goliath/blob/master/components/round-button/round-button.ls
 proof of concept demo: http://james-forbes.com/goliath/components/round-button/
