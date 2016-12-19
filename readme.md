@@ -1,6 +1,11 @@
 Goliath
 =======
 
+Sketches so far:
+
+- [Tab Pane](http://james-forbes.com/goliath/components/tab-pane/)
+- [Round Button](http://james-forbes.com/goliath/components/round-button/)
+
 > This is just a brain dump, read at your own peril.
 
 There's a problem, we're all writing the same component again and again in every framework.
