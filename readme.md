@@ -40,10 +40,6 @@ defaults =
     behaviour: ""
 ```
 
-Using livescript for no particular reason:
-https://github.com/JAForbes/goliath/blob/master/components/round-button/round-button.ls
-proof of concept demo: http://james-forbes.com/goliath/components/round-button/
-
 So its theoretically easy to replace classes for e.g. size without overwriting styles for behaviour, colour or shape
 And you can still just pass in a normal attrs hash to do whatever styles you want manually using JS in CSS techniques.
 
