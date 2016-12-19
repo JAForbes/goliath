@@ -71,7 +71,7 @@ for every component, you'd just get a nice bundle preconfigured for say
 
 What sort of inconsistencies?
 
-E.g. http://james-forbes.com/goliath/components/tab-pane/
+E.g. [Tab Pane](http://james-forbes.com/goliath/components/tab-pane/)
 
 I'm exposing two functions `getTabId` and `setTabId`, in the context of mithril, that could just be a prop, 
 in redux, that could be an action dispatcher, it could also be writing reading from the URL, 
