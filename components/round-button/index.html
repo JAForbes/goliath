@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.1/tachyons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/0.2.5/mithril.min.js"></script>
+    <script src="./round-button.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.js"></script>
+    <title>Round Button</title>
+  </head>
+  <body class="ma3">
+    <div id="container" class="pa3 w-40 fl"></div>
+    <pre class="w-60 fl"><code id="codeDisplay" class="language-js"></code></pre>
+    <script id="code">
+
+// use any template function
+// e.g. mithril, hyperscript, snabbdom, React.createElement
+const roundButton = view(m)
+
+// Create a button factory with default settings
+const defaultButton = roundButton()
+
+// replace a tachyon from a default style, and add a new behaviour
+const redDimButton = roundButton({
+  button: {
+    style: defaults.button.style.replace('bg-blue', 'bg-red')
+    ,behaviour: '.dim'
+  }
+})
+
+// override font and dimensions
+const smallFontButton = roundButton({
+  button: {
+    size: '.w3.h3.f5'
+  }
+})
+
+// fill the surrounding container
+const fillButton = roundButton({
+  button: {
+    shape: '.w-100 .h-100 br-100'
+  }
+})
+
+// blank slate
+const overrideButton = roundButton({
+  button: {
+    size: ''
+    ,shape: ''
+    ,behaviour: ''
+    ,style: ''
+  }
+  ,content: {
+    style: ''
+  }
+})
+
+m.render(container, [
+    defaultButton('+')
+    ,redDimButton('-')
+    ,smallFontButton('Small')
+    ,m('div', { style: {width: '200px', height: '200px'} }
+      ,fillButton('Click')
+    )
+    ,overrideButton('Click', () => alert('Clicked'))
+])
+    </script>
+    <script>
+      codeDisplay.innerHTML = code.innerHTML
+    </script>
+  </body>
+</html>

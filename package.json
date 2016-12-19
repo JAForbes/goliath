@@ -1,0 +1,25 @@
+{
+  "name": "goliath",
+  "version": "0.0.0",
+  "description": "Hyperscript neutral Tachyon components",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run compile && tape \"components/**/test.js\"",
+    "compile": "find -type f | grep -E \".ls$\" | xargs lsc -ck"
+  },
+  "keywords": [
+    "livescript",
+    "tachyons",
+    "mithril",
+    "virtual-dom",
+    "hyperscript",
+    "snabbdom"
+  ],
+  "author": "james.a.forbes@gmail.com <=> (http://james-forbes.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "livescript": "^1.5.0",
+    "tape": "^4.6.3",
+    "wright": "github:porsager/Wright"
+  }
+}
