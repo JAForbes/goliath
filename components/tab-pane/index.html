@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.1/tachyons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/0.2.5/mithril.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.js"></script>
+    <title>Tab Pane</title>
+  </head>
+  <body class="ma3">
+    <div id="container" class="pa3 w-40 fl"></div>
+    <pre class="w-60 fl"><code id="codeDisplay" class="language-js"></code></pre>
+    <script id="code">
+
+const TabPane = view(m)
+
+const defaultTab = TabPane()
+
+const tabStore = m.prop()
+const content = 
+  (header) => 
+    header.id == 'Activity'
+      ? 'Me at the start of 2016, Me at the end of 2016'
+    : header.id == 'Profile'
+      ? 'You have 0 followers, but your pretty cool'
+    : header.id == 'Settings'
+      ? 'Mute everyone!' 
+      : ''
+      
+const getTabId = tabStore
+const setTabId = tabStore
+
+const headers = [
+  { id: 'Activity' , content: 'Activity' }
+  ,{ id: 'Profile', content: 'Profile' }
+  ,{ id: 'Settings', content: 'Settings' }
+]
+
+const x = () => 
+  defaultTab(
+    headers
+    ,getTabId
+    ,setTabId
+    ,content
+  )
+
+m.mount(container, {
+  view: x
+})
+    </script>
+    <script>
+      codeDisplay.innerHTML = code.innerHTML
+    </script>
+  </body>
+</html>

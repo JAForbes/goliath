@@ -16,13 +16,11 @@
     <script id="code">
 
 // use any template function
-// e.g. mithril, hyperscript, snabbdom, React.createElement
+// e.g. mithril, hyperscript, snabbdom, React.createElem
 const roundButton = view(m)
 
-// Create a button factory with default settings
 const defaultButton = roundButton()
 
-// replace a tachyon from a default style, and add a new behaviour
 const redDimButton = roundButton({
   button: {
     style: defaults.button.style.replace('bg-blue', 'bg-red')
@@ -30,21 +28,18 @@ const redDimButton = roundButton({
   }
 })
 
-// override font and dimensions
 const smallFontButton = roundButton({
   button: {
     size: '.w3.h3.f5'
   }
 })
 
-// fill the surrounding container
 const fillButton = roundButton({
   button: {
     shape: '.w-100 .h-100 br-100'
   }
 })
 
-// blank slate
 const overrideButton = roundButton({
   button: {
     size: ''
